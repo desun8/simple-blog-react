@@ -1,0 +1,16 @@
+.app-theme-dark {
+  --bg-color: #193881;
+  --inverted-bg-color: #efefef;
+  --primary-color: #038103;
+  --secondary-color: #38d503;
+  --inverted-primary-color: #083bbb;
+  --inverted-secondary-color: #1a85f1;
+  --theme-switcher-color: #0115c6;
+
+  /* skeleton */
+  --skeleton-color: #1515ad;
+  --skeleton-shadow: #2b2be8;
+
+  /* code */
+  --code-bg: #091e4f;
+}
