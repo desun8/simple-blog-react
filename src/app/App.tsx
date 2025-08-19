@@ -1,6 +1,6 @@
 import { Link, Outlet } from "@tanstack/react-router"
 import { TanStackRouterDevtools } from "@tanstack/react-router-devtools"
-import { useTheme } from "./theme/useTheme"
+import { useTheme } from "./providers/ThemeProvider"
 import clsx from "clsx"
 
 export function App() {
