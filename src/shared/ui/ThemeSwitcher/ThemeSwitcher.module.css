@@ -1,0 +1,7 @@
+.ThemeSwitcher {
+	width: auto;
+}
+
+.icon {
+	color: var(--theme-switcher-color);
+}

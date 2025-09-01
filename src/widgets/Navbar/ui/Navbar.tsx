@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import cls from './Navbar.module.css';
-import { AppLink, AppLinkTheme } from "../../../shared/ui";
+import { AppLink, AppLinkTheme, ThemeSwitcher } from "shared/ui";
 
 interface NavbarProps {
 	className?: string;
@@ -12,6 +12,8 @@ export const Navbar = (props: NavbarProps) => {
 
 	return (
 		<div className={clsx(cls.Navbar, className)}>
+			<ThemeSwitcher />
+
 			<div className={cls.links}>
 				<AppLink to="/" theme={AppLinkTheme.SECONDARY}>
 					Home
