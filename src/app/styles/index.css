@@ -15,4 +15,15 @@ body {
   background-color: var(--bg-color);
 }
 
+.content-page {
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+.page-wrapper {
+  overflow-y: auto;
+
+  height: calc(100vh - var(--navbar-height));
+  padding: 20px 20px 20px 45px;
+}
 
