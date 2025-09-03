@@ -5,6 +5,7 @@ import './app/styles/index.css'
 // Import the generated route tree
 import { routeTree } from './app/routes/routeTree.gen'
 import { ThemeProvider } from './app/providers/ThemeProvider'
+import 'shared/config/i18n/i18n'
 
 // Create a new router instance
 const router = createRouter({ routeTree })
