@@ -1,4 +1,5 @@
 .AppButton {
+	color: var(--primary-color);
 	cursor: pointer;
 }
 
@@ -8,4 +9,12 @@
 	border: 0;
 
 	background-color: transparent;
+}
+
+.primary {
+	color: var(--primary-color);
+}
+
+.secondary {
+	color: var(--inverted-primary-color);
 }

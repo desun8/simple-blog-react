@@ -2,13 +2,15 @@ import clsx from "clsx";
 import cls from './AppButton.module.css';
 import type { ButtonHTMLAttributes } from "react";
 
-export const THEME = {
-	CLEAR: 'clear'
+export const AppButtonTheme = {
+	CLEAR: 'clear',
+	PRIMARY: 'primary',
+	SECONDARY: 'secondary',
 } as const;
 
 interface AppButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 	className?: string
-	theme?: typeof THEME[keyof typeof THEME]
+	theme?: typeof AppButtonTheme[keyof typeof AppButtonTheme]
 }
 
 export const AppButton = (props: AppButtonProps) => {
