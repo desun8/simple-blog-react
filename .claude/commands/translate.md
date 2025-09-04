@@ -1,0 +1,1 @@
+I've set up Russian (@public/locales/ru/*.json) as the default locale. Please take the translation keys and structure from the Russian locale files and create corresponding files for other locales in @public/locales/ (only for existing directories), or add the missing keys to existing locale files if they already exist.
