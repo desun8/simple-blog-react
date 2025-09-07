@@ -1,7 +1,11 @@
-import { useTranslation } from "react-i18next"
+import { useTranslation } from "react-i18next";
 
 export const IndexPage = () => {
-	const { t } = useTranslation('main')
+  const { t } = useTranslation("main");
 
-	return (<div><h1>{t('title')}</h1></div>)
-}
+  return (
+    <div>
+      <h1>{t("title")}</h1>
+    </div>
+  );
+};

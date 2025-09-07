@@ -1,7 +1,6 @@
 .sr-only {
   position: absolute !important;
   overflow: hidden !important;
-  clip: rect(1px, 1px, 1px, 1px) !important; 
 
   width: 1px !important;
   height: 1px !important;
@@ -9,21 +8,18 @@
   padding: 0 !important;
   border: 0 !important;
 
-  white-space: nowrap !important; 
-  -webkit-clip-path: inset(50%) !important;
+  white-space: nowrap !important;
   clip-path: inset(50%) !important;
 }
 
 .sr-only-focusable:focus,
 .sr-only-focusable:active {
   overflow: visible !important;
-  clip: auto !important;
 
   width: auto !important;
   height: auto !important;
   margin: auto !important;
 
   white-space: normal !important;
-  -webkit-clip-path: none !important;
   clip-path: none !important;
 }

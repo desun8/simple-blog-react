@@ -6,7 +6,7 @@ import about from "../../../public/locales/ru/about.json";
 const resources = {
   translation,
   main,
-  about
+  about,
 } as const;
 
 const defaultNS = "translation";

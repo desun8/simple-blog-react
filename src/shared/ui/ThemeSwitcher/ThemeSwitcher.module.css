@@ -1,7 +1,7 @@
 .ThemeSwitcher {
-	width: auto;
+  width: auto;
 }
 
 .icon {
-	color: var(--theme-switcher-color);
+  color: var(--theme-switcher-color);
 }

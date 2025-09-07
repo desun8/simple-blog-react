@@ -22,7 +22,7 @@ export const useTheme = (): UseTheme => {
     const newTheme = theme === Theme.LIGHT ? Theme.DARK : Theme.LIGHT;
     setTheme(newTheme);
     localStorage.setItem(LOCAL_STORAGE_THEME_KEY, newTheme);
-    console.log(newTheme)
+    console.log(newTheme);
   };
 
   return {
