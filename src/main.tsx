@@ -6,9 +6,15 @@ import "./app/styles/index.css";
 import { routeTree } from "./app/routes/routeTree.gen";
 import { ThemeProvider } from "./app/providers/ThemeProvider";
 import "shared/config/i18n/i18n";
+import { NotFoundPage } from "pages/NotFoundPage";
+import { PageLoader } from "shared/ui";
 
 // Create a new router instance
-const router = createRouter({ routeTree });
+const router = createRouter({
+  routeTree,
+  defaultNotFoundComponent: NotFoundPage,
+  defaultPendingComponent: PageLoader,
+});
 
 // Register the router instance for type safety
 declare module "@tanstack/react-router" {
