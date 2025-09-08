@@ -5,5 +5,7 @@
 		"home": "Home",
 		"about": "About"
 	},
-	"404_title": "Page not found"
+	"404_title": "Page not found",
+	"error_msg": "An unexpected error occurred",
+	"reload_page": "Reload page"
 }

@@ -8,12 +8,15 @@ import { ThemeProvider } from "./app/providers/ThemeProvider";
 import "shared/config/i18n/i18n";
 import { NotFoundPage } from "pages/NotFoundPage";
 import { PageLoader } from "shared/ui";
+import { ErrorBoundary } from "app/providers/ErrorBoundary";
+import { PageError } from "widgets/PageError";
 
 // Create a new router instance
 const router = createRouter({
   routeTree,
   defaultNotFoundComponent: NotFoundPage,
   defaultPendingComponent: PageLoader,
+  defaultErrorComponent: PageError,
 });
 
 // Register the router instance for type safety
@@ -24,8 +27,10 @@ declare module "@tanstack/react-router" {
 }
 createRoot(document.getElementById("app")!).render(
   <StrictMode>
-    <ThemeProvider>
-      <RouterProvider router={router} />
-    </ThemeProvider>
+    <ErrorBoundary>
+      <ThemeProvider>
+        <RouterProvider router={router} />
+      </ThemeProvider>
+    </ErrorBoundary>
   </StrictMode>,
 );
