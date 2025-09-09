@@ -1,3 +1,5 @@
+/// <reference types="vitest" />
+/// <reference types="@vitest/browser/providers/playwright" />
 import { defineConfig } from "vite";
 import tsconfigPath from "vite-tsconfig-paths";
 import react from "@vitejs/plugin-react";
@@ -17,14 +19,37 @@ export default defineConfig({
     }),
     react(),
     svgr(),
-    ...(process.env.ANALYZE === "true" ? [
-      visualizer({
-        template: "treemap", // or sunburst
-        open: true,
-        gzipSize: true,
-        brotliSize: true,
-        filename: "stats.html",
-      })
-    ] : []),
+    ...(process.env.ANALYZE === "true"
+      ? [
+          visualizer({
+            template: "treemap", // or sunburst
+            open: true,
+            gzipSize: true,
+            brotliSize: true,
+            filename: "stats.html",
+          }),
+        ]
+      : []),
   ],
+  css: {
+    modules: {
+      generateScopedName:
+        process.env.NODE_ENV === "test"
+          ? "[local]" // Отключаем генерацию хеша для тестов
+          : "[local]_[hash:base64:5]",
+    },
+  },
+  test: {
+    browser: {
+      enabled: true,
+      provider: "playwright",
+      instances: [{ browser: "chromium" }],
+      headless: true,
+    },
+    css: {
+      modules: {
+        classNameStrategy: "non-scoped",
+      },
+    },
+  },
 });

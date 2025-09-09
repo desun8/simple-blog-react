@@ -21,8 +21,11 @@ export const TheSidebar = (props: TheSidebarProps) => {
   return (
     <aside
       className={clsx(cls.TheSidebar, className, collapsed && cls.collapsed)}
+      data-testid="sidebar"
     >
-      <AppButton onClick={onToggle}>{toggleLabel}</AppButton>
+      <AppButton data-testid="sidebar-toggle" onClick={onToggle}>
+        {toggleLabel}
+      </AppButton>
 
       <div className={cls.switchers}>
         <ThemeSwitcher />
