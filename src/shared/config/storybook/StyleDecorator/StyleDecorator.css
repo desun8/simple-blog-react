@@ -1,0 +1,11 @@
+.app {
+  padding: 2rem;
+}
+
+.app:has(.app) {
+  padding: 0;
+}
+
+.docs-story .app {
+  min-height: auto;
+}
