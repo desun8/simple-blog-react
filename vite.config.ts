@@ -66,6 +66,7 @@ export default defineConfig({
               },
             ],
             headless: true,
+            screenshotFailures: false,
           },
           css: {
             modules: {
