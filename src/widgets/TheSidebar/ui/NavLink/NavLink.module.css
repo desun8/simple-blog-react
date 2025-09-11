@@ -1,0 +1,19 @@
+.NavLink {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  justify-content: start;
+  gap: 5px;
+}
+
+.label {
+  white-space: nowrap;
+
+  transition: all 0.2s;
+}
+
+.is-collapsed .label {
+  width: 0;
+
+  opacity: 0;
+}

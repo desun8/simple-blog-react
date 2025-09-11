@@ -8,6 +8,7 @@ import { Suspense } from "react";
 
 export function App() {
   const { theme } = useTheme();
+  const showRouterDevtools = false;
   return (
     <div className={clsx("app", theme)}>
       <Suspense>
@@ -19,7 +20,7 @@ export function App() {
           </div>
         </div>
       </Suspense>
-      <TanStackRouterDevtools />
+      {showRouterDevtools && <TanStackRouterDevtools />}
     </div>
   );
 }
