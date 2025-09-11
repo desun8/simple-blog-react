@@ -13,7 +13,7 @@
     "lint:css:fix": "stylelint \"src/**/*.css\" --fix",
     "prettier": "prettier --check src/",
     "prettier:fix": "prettier --write src/",
-    "test:unit": "vitest run",
+    "test:unit": "vitest run --project unit",
     "test:unit:watch": "vitest",
     "test:unit:browser": "vitest --browser.headless=false",
     "test:ui": "chromatic",
