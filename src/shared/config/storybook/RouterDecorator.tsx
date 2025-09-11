@@ -19,7 +19,7 @@ export const RouterDecorator = (
 
   const rootRoute = createRootRoute();
 
-  const children = routes.map((path: any) =>
+  const children = routes.map((path: string) =>
     createRoute({
       path,
       getParentRoute: () => rootRoute,
